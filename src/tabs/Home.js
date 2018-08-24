@@ -3,8 +3,6 @@ import { Button, StyleSheet, Text, View } from "react-native";
 import HeaderButton from "../components/HeaderButton";
 
 export default class Home extends Component {
-
-
   render() {
     const { navigate } = this.props.navigation;
     return (

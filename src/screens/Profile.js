@@ -1,6 +1,19 @@
 import React, { Component } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-
+import { StyleSheet, View } from "react-native";
+import {
+  Container,
+  Header,
+  Button,
+  Content,
+  Card,
+  CardItem,
+  Body,
+  Left,
+  Icon,
+  Title,
+  Right,
+  Text
+} from "native-base";
 export default class Profile extends Component {
   static navigationOptions = {
     title: "What to do today?",
@@ -29,13 +42,28 @@ export default class Profile extends Component {
       state: { params }
     } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text style={styles.header}>
-          This is {params.user}
-          's profile
-        </Text>
-        <Button onPress={() => navigate("Modal")} title="Open Modal" />
-      </View>
+      <Container>
+        <Content>
+          <Button disabled>
+            <Text>Default</Text>
+          </Button>
+          <Button disabled bordered>
+            <Text>Outline</Text>
+          </Button>
+          <Button disabled rounded>
+            <Text>Rounded</Text>
+          </Button>
+          <Button disabled large>
+            <Text>Custom</Text>
+          </Button>
+          <Button disabled iconRight>
+            <Text>Icon Button</Text>
+          </Button>
+          <Button disabled block>
+            <Text>Block</Text>
+          </Button>
+        </Content>
+      </Container>
     );
   }
 }

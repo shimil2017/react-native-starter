@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import {
-  StyleSheet,
-  View
-} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { StyleSheet, View } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 export default class HeaderButton extends Component {
-
   static propTypes = {
     onPress: PropTypes.func.isRequired,
-    icon: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired
   };
 
   static defaultProps = {
-    icon: 'md-menu',
+    icon: "md-menu"
   };
 
   render() {
@@ -30,7 +26,6 @@ export default class HeaderButton extends Component {
       </View>
     );
   }
-
 }
 
 const styles = StyleSheet.create({
@@ -38,6 +33,6 @@ const styles = StyleSheet.create({
     // position absolutely in the top left corner
     ...StyleSheet.absoluteFillObject,
     top: 20,
-    left: 5,
-  },
+    left: 5
+  }
 });

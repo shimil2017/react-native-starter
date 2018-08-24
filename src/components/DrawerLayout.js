@@ -1,19 +1,14 @@
 import React, { Component } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import HeaderButton from "../components/HeaderButton";
 
-export default class Settings extends Component {
+export default class DrawerLayout extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <HeaderButton onPress={() => navigate("DrawerOpen")} />
-        <Text style={styles.header}>Settings Tab</Text>
-        <Button
-          onPress={() => navigate("Profile", { user: "Tom" })}
-          title="Open Profile"
-        />
+        <Text style={styles.header}>Drawer</Text>
         <Button onPress={() => navigate("Modal")} title="Open Modal" />
+        <Button onPress={() => navigate("DrawerClose")} title="Close Me" />
       </View>
     );
   }
