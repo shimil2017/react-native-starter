@@ -4,12 +4,19 @@ import { Button, StyleSheet, Text, View } from "react-native";
 export default class Profile extends Component {
   static navigationOptions = {
     title: "What to do today?",
+
     headerStyle: {
       backgroundColor: "#16a085",
       height: 85
     },
     headerTitleStyle: {
-      color: "white"
+      color: "white",
+      fontWeight: "bold",
+      color: "#fff",
+      zIndex: 1,
+      fontSize: 18,
+      lineHeight: 23,
+      fontFamily: "CircularStd-Bold"
     },
     headerTruncatedBackTitle: "Nah"
   };
